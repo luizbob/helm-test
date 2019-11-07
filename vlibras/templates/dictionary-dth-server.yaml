@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+#kubectl expose deployment dictionaryapi --port=80 --type=LoadBalancer
+#kubectl autoscale deployment dictionaryapi --cpu-percent=70 --min=1 --max=8
+kind: Deployment
+metadata:
+  name: dicionarioapi
+  labels:
+    app: dicionarioapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dicionarioapi
+  template:
+    metadata:
+      labels:
+        app: dicionarioapi
+    spec:
+      containers:
+        - image: vlibras/dictionary-api:11
+          name: dicionarioapi
+          env:
+            - name: DICTIONARY_URL
+              value: "sinais.vlibras.lavid.ufpb.br"
+            - name: DICTIONARY_PORT
+              value: "80"
+            - name: PORT
+              value: "80"
+            - name: DB_HOST
+              value: "mongo"
+            - name: DB_PORT
+              value: "27017"
+          ports:
+            - containerPort: 80
+              name: vl-dic-port
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 80
+            initialDelaySeconds: 60
+            periodSeconds: 20
+          volumeMounts:
+            - name: dictionary-storage
+              mountPath: /exports
+      volumes:
+        - name: dictionary-storage
+          persistentVolumeClaim:
+            claimName: dictionary-bundles
+      
