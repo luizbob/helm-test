@@ -1,9 +1,10 @@
 apiVersion: "v1"
 #gcloud compute disks create dictionary-disk --zone us-central1-a --size 30
-kind: "PersistentVolume"
+kind: PersistentVolume
 metadata:
   name: dictionary-pv
 spec:
+  storageClassName: standard
   capacity:
     storage: 30Gi 
   accessModes:

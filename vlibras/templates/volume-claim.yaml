@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: dictionary-claim
 spec:
+  storageClassName: standard
   accessModes:
     - ReadWriteMany
   volumeMode: Filesystem
