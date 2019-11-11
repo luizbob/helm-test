@@ -9,5 +9,5 @@ spec:
   accessModes:
     - ReadWriteMany
   gcePersistentDisk: 
-    fsType: ext4
-    pdName: dictionary-disk
+    fsType: "ext4"
+    pdName: "dictionary-disk"
