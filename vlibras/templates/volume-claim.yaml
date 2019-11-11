@@ -3,10 +3,11 @@ kind: PersistentVolumeClaim
 metadata:
   name: dictionary-claim
 spec:
-  storageClassName: standard
+  storageClass: "standard"
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   volumeMode: Filesystem
+  persistentVolumeReclaimPolicy: Retain
   resources:
     requests:
       storage: 30Gi
