@@ -24,8 +24,6 @@ spec:
               value: "sinais.vlibras.lavid.ufpb.br"
             - name: DICTIONARY_PORT
               value: "80"
-            - name: PORT
-              value: "80"
             - name: DB_HOST
               value: "mongo"
             - name: DB_PORT
