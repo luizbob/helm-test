@@ -12,8 +12,10 @@ spec:
     matchLabels:
       app: dicionarioapi
   template:
-    labels:
-      run: dicionarioapi
+    metadata:
+      labels:
+        app: dicionarioapi
+        run: dicionarioapi
     spec:
       containers:
         - image: vlibras/dictionary-api:11
