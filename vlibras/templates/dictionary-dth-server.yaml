@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: dicionarioapi
+        run: dicionarioapi
     spec:
       containers:
         - image: vlibras/dictionary-api:11
@@ -28,6 +28,8 @@ spec:
               value: "mongo"
             - name: DB_PORT
               value: "27017"
+            - name: PORT
+              value: "80"
           ports:
             - containerPort: 80
               name: vl-dic-port

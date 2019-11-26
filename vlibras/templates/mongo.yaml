@@ -11,6 +11,9 @@ spec:
       labels:
         name: mongo
     spec:
+      selector:
+        matchLabels:
+          run: mongo
       containers:
       - image: mongo
         name: mongo
