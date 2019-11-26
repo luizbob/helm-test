@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: mongo
 spec:
-  type: ClusterIP
   ports:
     - name: mongo
       port: 27017
