@@ -10,9 +10,7 @@ spec:
     metadata:
       labels:
         name: mongo
-  selector:
-    matchLabels:
-      run: mongo
+        run: mongo
     spec:
       containers:
       - image: mongo
