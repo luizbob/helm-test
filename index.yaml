@@ -2,8 +2,17 @@ apiVersion: v1
 entries:
   vlibras:
   - apiVersion: v1
+    appVersion: "2.3"
+    created: "2019-11-26T17:24:10.6002652-03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0121176aefd2a8cca4f342399e6b2287a94cecdd80e8f745250bb47c5768a788
+    name: vlibras
+    urls:
+    - https://luizbob.github.io/helm-test/vlibras-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v1
     appVersion: "2.2"
-    created: "2019-11-26T17:18:13.8172387-03:00"
+    created: "2019-11-26T17:24:10.6002652-03:00"
     description: A Helm chart for Kubernetes
     digest: c058869e23254060a2b2448c392be34c4d49f144cbc66b15a6a566eb91e88c33
     name: vlibras
@@ -12,11 +21,11 @@ entries:
     version: 0.2.2
   - apiVersion: v1
     appVersion: "2.1"
-    created: "2019-11-26T17:18:13.8162416-03:00"
+    created: "2019-11-26T17:24:10.6002652-03:00"
     description: A Helm chart for Kubernetes
     digest: 81974b0aef0e64c2f638a15abbe57661dcfa46d4710c0e17cad1ebb2b7dcdb5b
     name: vlibras
     urls:
     - https://luizbob.github.io/helm-test/vlibras-0.2.1.tgz
     version: 0.2.1
-generated: "2019-11-26T17:18:13.8162416-03:00"
+generated: "2019-11-26T17:24:10.599269-03:00"
